@@ -77,7 +77,7 @@
     CDVPluginResult* pluginResult = nil;
     bool follow = [[command.arguments objectAtIndex:0] boolValue];
 
-    securityPolicy.validatesDomainName = validate;
+    securityPolicy.followRedirect = follow;
 
     pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
